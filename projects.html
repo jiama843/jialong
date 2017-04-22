@@ -1,0 +1,82 @@
+<!doctype html>
+<html id="bg2">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>    
+    <script src="js/bootstrap.min.js"></script>
+</head>
+    
+<body>  
+    <!--Navigation bar-->
+    <nav class="navbar navbar-default navbar-fixed-top" id="bg2">
+        <div class="container">
+            <div class="navbar-header" style="text-align:center">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                    <a class="navbar-brand" href="index.html">Jialong 
+                    <span>Ma</span>
+                    <span style="font-size:10px">University of Waterloo Computer Science</span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--/ Navigation bar-->
+    
+    <div>    
+        <div id="bg2" style="background-color:white">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+                <div class="row" style="text-align:center">
+                    <a href="https://github.com/jiama843/FactorPlus">
+                        <img id="factor+" src="Pictures/o-UNIVERSITY-OF-WATERLOO-facebook.jpg" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onHover="enlarge('factor+')">
+                    </a>
+                    <a href="https://github.com/jiama843/Runner">
+                        <img id="runner" src="Pictures/o-UNIVERSITY-OF-WATERLOO-facebook.jpg" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onHover="enlarge('runner')">
+                    </a>
+                    <a href=https://github.com/jiama843/MusicLibraryJava>
+                        <img id="musiclib" src="Pictures/Profile Pic.png" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onHover="enlarge('musiclib')">
+                    </a>
+                    <img id="IoT" src="Pictures/goose.jpg" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onHover="enlarge('IoT')">
+                </div>
+            <br>
+            <h1 class="text-center">Projects</h1>
+            <p class="text-center">Feel free to look around!</p>
+            <br>
+            <br>
+            </div>
+        </div>
+    <script>
+        function enlarge(elem){
+            var myElement = document.getElementById(elem);
+            var rect = myElement.getBoundingClientRect();
+            var size = 0;
+            var grow = setInterval(
+            function(){
+                rect.height++;
+                rect.width++;
+                if(size >= 200){
+                    clearInterval(grow);
+                }
+            }, 3);
+        }
+    </script> 
+    </body>
+</html>
