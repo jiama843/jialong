@@ -46,15 +46,15 @@
             <br>
                 <div class="row" style="text-align:center">
                     <a href="https://github.com/jiama843/FactorPlus">
-                        <img id="factor+" src="Pictures/o-UNIVERSITY-OF-WATERLOO-facebook.jpg" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onHover="enlarge('factor+')">
+                        <img id="factor+" src="Pictures/o-UNIVERSITY-OF-WATERLOO-facebook.jpg" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onmouseover="enlarge('factor+')">
                     </a>
                     <a href="https://github.com/jiama843/Runner">
-                        <img id="runner" src="Pictures/o-UNIVERSITY-OF-WATERLOO-facebook.jpg" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onHover="enlarge('runner')">
+                        <img id="runner" src="Pictures/o-UNIVERSITY-OF-WATERLOO-facebook.jpg" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onmouseover="pop('runner')">
                     </a>
                     <a href=https://github.com/jiama843/MusicLibraryJava>
-                        <img id="musiclib" src="Pictures/Profile Pic.png" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onHover="enlarge('musiclib')">
+                        <img id="musiclib" src="Pictures/Profile Pic.png" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onmouseover="pop('musiclib')">
                     </a>
-                    <img id="IoT" src="Pictures/goose.jpg" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onHover="enlarge('IoT')">
+                    <img id="IoT" src="Pictures/goose.jpg" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onmouseover="pop('IoT')">
                 </div>
             <br>
             <h1 class="text-center">Projects</h1>
@@ -64,18 +64,22 @@
             </div>
         </div>
     <script>
+        function pop(elem){
+            document.getElementById(elem).width = 200;
+            document.getElementById(elem).height = 200;
+        }
+        
         function enlarge(elem){
-            var myElement = document.getElementById(elem);
-            var rect = myElement.getBoundingClientRect();
-            var size = 0;
+            //var myElement = document.getElementById(elem);
+            //var rect = myElement.getBoundingClientRect();
             var grow = setInterval(
             function(){
-                rect.height++;
-                rect.width++;
-                if(size >= 200){
+                if(document.getElementById(elem).width >= 200 && document.getElementById(elem).height >= 200){
                     clearInterval(grow);
                 }
-            }, 3);
+                document.getElementById(elem).width++;
+                document.getElementById(elem).height++;
+            }, 1);
         }
     </script> 
     </body>
