@@ -46,14 +46,14 @@
             <br>
                 <div class="row" style="text-align:center">
                     <a href="https://github.com/jiama843/FactorPlus">
-                        <img id="factor+" src="Pictures/Start.png" class="img-circle img-fluid" alt="Responsive image" width="50" height="50" onmouseover="enlarge('factor+');setText1();" onmouseleave="resize('factor+');removeText();">
+                        <img id="factor+" src="Pictures/Start.png" class="img-circle img-fluid" alt="Responsive image" width="50" height="50" onmouseover="enlarge1('factor+');setText1();" onmouseleave="resize1('factor+');removeText();">
                     </a>
                     <a href="https://github.com/jiama843/Runner">
-                        <img id="runner" src="Pictures/Standard%20Flying%20Tsuchi.png" class="img-circle img-fluid" alt="Responsive image" width="50" height="50" onmouseover="enlarge('runner');setText2();" onmouseleave="resize('runner');removeText();">
+                        <img id="runner" src="Pictures/Standard%20Flying%20Tsuchi.png" class="img-circle img-fluid" alt="Responsive image" width="50" height="50" onmouseover="enlarge2('runner');setText2();" onmouseleave="resize2('runner');removeText();">
                     </a>
                     <a href=https://github.com/jiama843/MusicLibraryJava>
-                        <img id="musiclib" src="Pictures/music-note-icon.jpg" class="img-circle img-fluid" alt="Responsive image" width="50" height="50" onmouseover="enlarge('musiclib');setText3()"
-                        onmouseleave="resize('musiclib');removeText()">
+                        <img id="musiclib" src="Pictures/music-note-icon.jpg" class="img-circle img-fluid" alt="Responsive image" width="50" height="50" onmouseover="enlarge3('musiclib');setText3()"
+                        onmouseleave="resize3('musiclib');removeText()">
                     </a>
                     <!--<img id="IoT" src="Pictures/goose.jpg" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onmouseover="enlarge('IoT', 4)" onmouseleave="resize('IoT', 4)">-->
                 </div>
@@ -76,8 +76,13 @@
             document.getElementById(elem).height = 200;
         }*/
         
-        var enlargeRunning = false;
-        var resizeRunning = false;
+        var enlargeRunning1 = false;
+        var enlargeRunning2 = false;
+        var enlargeRunning3 = false;
+        
+        var resizeRunning1 = false;
+        var resizeRunning2 = false; 
+        var resizeRunning3 = false;
         
         /*var mouseover1 = false;
         var mouseover2 = false;
@@ -100,28 +105,76 @@
             mouseover4 = flag;
         }*/
         
-        function enlarge(elem/*, mousenum*/){
+        function enlarge1(elem/*, mousenum*/){
             //var myElement = document.getElementById(elem);
             //var rect = myElement.getBoundingClientRect();
             if(document.getElementById(elem).width >= 200 && document.getElementById(elem).height >= 200){
-                enlargeRunning = false;
+                enlargeRunning1 = false;
                 return;
             }
-            enlargeRunning = true;
+            enlargeRunning1 = true;
             var grow = setInterval(
             function(){
                 if((document.getElementById(elem).width >= 200 && document.getElementById(elem).height >= 200) ||
-                   resizeRunning /* ||
+                   resizeRunning1 /* ||
                   (!mouseover1 && mousenum == 1) ||
                   (!mouseover2 && mousenum == 2) ||
                   (!mouseover3 && mousenum == 3) /*||
                   (!mouseover4 && mousenum == 4)*/){
-                    enlargeRunning = false;
+                    enlargeRunning1 = false;
                     clearInterval(grow);
                 }
-                document.getElementById(elem).width+=4;
-                document.getElementById(elem).height+=4;
-            }, 1);
+                document.getElementById(elem).width+=7;
+                document.getElementById(elem).height+=7;
+            }, 10);
+        }
+        
+        function enlarge2(elem/*, mousenum*/){
+            //var myElement = document.getElementById(elem);
+            //var rect = myElement.getBoundingClientRect();
+            if(document.getElementById(elem).width >= 200 && document.getElementById(elem).height >= 200){
+                enlargeRunning2 = false;
+                return;
+            }
+            enlargeRunning2 = true;
+            var grow = setInterval(
+            function(){
+                if((document.getElementById(elem).width >= 200 && document.getElementById(elem).height >= 200) ||
+                   resizeRunning2 /* ||
+                  (!mouseover1 && mousenum == 1) ||
+                  (!mouseover2 && mousenum == 2) ||
+                  (!mouseover3 && mousenum == 3) /*||
+                  (!mouseover4 && mousenum == 4)*/){
+                    enlargeRunning2 = false;
+                    clearInterval(grow);
+                }
+                document.getElementById(elem).width+=7;
+                document.getElementById(elem).height+=7;
+            }, 10);
+        }
+        
+        function enlarge3(elem/*, mousenum*/){
+            //var myElement = document.getElementById(elem);
+            //var rect = myElement.getBoundingClientRect();
+            if(document.getElementById(elem).width >= 200 && document.getElementById(elem).height >= 200){
+                enlargeRunning3 = false;
+                return;
+            }
+            enlargeRunning3 = true;
+            var grow = setInterval(
+            function(){
+                if((document.getElementById(elem).width >= 200 && document.getElementById(elem).height >= 200) ||
+                   resizeRunning3 /* ||
+                  (!mouseover1 && mousenum == 1) ||
+                  (!mouseover2 && mousenum == 2) ||
+                  (!mouseover3 && mousenum == 3) /*||
+                  (!mouseover4 && mousenum == 4)*/){
+                    enlargeRunning3 = false;
+                    clearInterval(grow);
+                }
+                document.getElementById(elem).width+=7;
+                document.getElementById(elem).height+=7;
+            }, 10);
         }
         
         function setText1(){
@@ -148,29 +201,79 @@
             clearinterval(grow);
         }
         
-        function resize(elem/*, mousenum*/){
+        function resize1(elem/*, mousenum*/){
             //var myElement = document.getElementById(elem);
             //var rect = myElement.getBoundingClientRect();
             if(document.getElementById(elem).width <= 50
                && document.getElementById(elem).height <= 50){
-                resizeRunning = false;
+                resizeRunning1 = false;
                 return;
             }
-            resizeRunning = true;
+            resizeRunning1 = true;
             var shrink = setInterval(
             function(){
                 if((document.getElementById(elem).width <= 50 && document.getElementById(elem).height <= 50) ||
-                   enlargeRunning/* ||
+                   enlargeRunning1/* ||
                   (mouseover1 && mousenum == 1) ||
                   (mouseover2 && mousenum == 2) ||
                   (mouseover3 && mousenum == 3) /*||
                   (mouseover4 && mousenum == 4)*/){
-                        resizeRunning = false;
+                        resizeRunning1 = false;
                         clearInterval(shrink);
                 }
-                document.getElementById(elem).width-=4;
-                document.getElementById(elem).height-=4;
-            }, 1);
+                document.getElementById(elem).width-=7;
+                document.getElementById(elem).height-=7;
+            }, 10);
+        }
+        
+        function resize2(elem/*, mousenum*/){
+            //var myElement = document.getElementById(elem);
+            //var rect = myElement.getBoundingClientRect();
+            if(document.getElementById(elem).width <= 50
+               && document.getElementById(elem).height <= 50){
+                resizeRunning2 = false;
+                return;
+            }
+            resizeRunning2 = true;
+            var shrink = setInterval(
+            function(){
+                if((document.getElementById(elem).width <= 50 && document.getElementById(elem).height <= 50) ||
+                   enlargeRunning2/* ||
+                  (mouseover1 && mousenum == 1) ||
+                  (mouseover2 && mousenum == 2) ||
+                  (mouseover3 && mousenum == 3) /*||
+                  (mouseover4 && mousenum == 4)*/){
+                        resizeRunning2 = false;
+                        clearInterval(shrink);
+                }
+                document.getElementById(elem).width-=7;
+                document.getElementById(elem).height-=7;
+            }, 10);
+        }
+        
+        function resize3(elem/*, mousenum*/){
+            //var myElement = document.getElementById(elem);
+            //var rect = myElement.getBoundingClientRect();
+            if(document.getElementById(elem).width <= 50
+               && document.getElementById(elem).height <= 50){
+                resizeRunning3 = false;
+                return;
+            }
+            resizeRunning3 = true;
+            var shrink = setInterval(
+            function(){
+                if((document.getElementById(elem).width <= 50 && document.getElementById(elem).height <= 50) ||
+                   enlargeRunning3/* ||
+                  (mouseover1 && mousenum == 1) ||
+                  (mouseover2 && mousenum == 2) ||
+                  (mouseover3 && mousenum == 3) /*||
+                  (mouseover4 && mousenum == 4)*/){
+                        resizeRunning3 = false;
+                        clearInterval(shrink);
+                }
+                document.getElementById(elem).width-=7;
+                document.getElementById(elem).height-=7;
+            }, 10);
         }
     </script> 
     </body>
