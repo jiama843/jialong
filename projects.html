@@ -46,6 +46,15 @@
             <br>
                 <div class="row" style="text-align:center">
                     <a href="https://github.com/jiama843/FactorPlus">
+                        <img id="factor+" src="Pictures/Start.png" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onmouseover="enlarge('factor+')" onmouseleave="resize('factor+')">
+                    </a>
+                    <a href="https://github.com/jiama843/Runner">
+                        <img id="runner" src="Pictures/Standard%20Flying%20Tsuchi.png" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onmouseover="enlarge('runner')" onmouseleave="resize('runner')">
+                    </a>
+                    <a href=https://github.com/jiama843/MusicLibraryJava>
+                        <img id="musiclib" src="Pictures/music-note-icon.jpg" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onmouseover="enlarge('musiclib')" onmouseleave="resize('musiclib')">
+                    </a>
+                    <img id="IoT" src="Pictures/goose.jpg" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onmouseover="enlarge('IoT') setMouse4(true)" onmouseleave="resize('IoT')">
                         <img id="factor+" src="Pictures/o-UNIVERSITY-OF-WATERLOO-facebook.jpg" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onmouseover="enlarge('factor+')">
                     </a>
                     <a href="https://github.com/jiama843/Runner">
@@ -58,12 +67,79 @@
                 </div>
             <br>
             <h1 class="text-center">Projects</h1>
-            <p class="text-center">Feel free to look around!</p>
+            <p class="text-center">Feel free to look around! 
+                <br> 
+                (Hover over Icons to enlarge)</p>
             <br>
             <br>
             </div>
         </div>
     <script>
+        /*function pop(elem){
+            document.getElementById(elem).width = 200;
+            document.getElementById(elem).height = 200;
+        }*/
+        
+        /*var mouseover1;
+        var mouseover2;
+        var mouseover3;
+        var mouseover4;
+        
+        function setMouse1(flag){
+            mouseover1 = flag;
+        }
+        
+        function setMouse2(flag){
+            mouseover2 = flag;
+        }
+        
+        function setMouse3(flag){
+            mouseover3 = flag;
+        }
+        
+        function setMouse4(flag){
+            mouseover4 = flag;
+        }*/
+        
+        function enlarge(elem){
+            //var myElement = document.getElementById(elem);
+            //var rect = myElement.getBoundingClientRect();
+            if(document.getElementById(elem).width >= 200 && document.getElementById(elem).height >= 200){
+                return;
+            }
+            var grow = setInterval(
+            function(){
+                if((document.getElementById(elem).width >= 200 && document.getElementById(elem).height >= 200) /*||
+                  (!mouseover1 && mousenum == 1) ||
+                  (!mouseover2 && mousenum == 2) ||
+                  (!mouseover3 && mousenum == 3) ||
+                  (!mouseover4 && mousenum == 4)*/){
+                    clearInterval(grow);
+                }
+                document.getElementById(elem).width+=3;
+                document.getElementById(elem).height+=3;
+            }, 3);
+        }
+        
+        function resize(elem){
+            //var myElement = document.getElementById(elem);
+            //var rect = myElement.getBoundingClientRect();
+            if(document.getElementById(elem).width <= 25
+               && document.getElementById(elem).height <= 25){
+                return;
+            }
+            var shrink = setInterval(
+            function(){
+                if((document.getElementById(elem).width <= 25 && document.getElementById(elem).height <= 25) /*||
+                  (mouseover1 && mousenum == 1) ||
+                  (mouseover2 && mousenum == 2) ||
+                  (mouseover3 && mousenum == 3) ||
+                  (mouseover4 && mousenum == 4)*/){
+                    clearInterval(shrink);
+                }
+                document.getElementById(elem).width-=3;
+                document.getElementById(elem).height-=3;
+            }, 3);
         function pop(elem){
             document.getElementById(elem).width = 200;
             document.getElementById(elem).height = 200;
@@ -81,6 +157,7 @@
                 document.getElementById(elem).height++;
             }, 1);
         }
+        
     </script> 
     </body>
 </html>
