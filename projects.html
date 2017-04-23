@@ -55,15 +55,6 @@
                         <img id="musiclib" src="Pictures/music-note-icon.jpg" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onmouseover="enlarge('musiclib')" onmouseleave="resize('musiclib')">
                     </a>
                     <img id="IoT" src="Pictures/goose.jpg" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onmouseover="enlarge('IoT') setMouse4(true)" onmouseleave="resize('IoT')">
-                        <img id="factor+" src="Pictures/o-UNIVERSITY-OF-WATERLOO-facebook.jpg" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onmouseover="enlarge('factor+')">
-                    </a>
-                    <a href="https://github.com/jiama843/Runner">
-                        <img id="runner" src="Pictures/o-UNIVERSITY-OF-WATERLOO-facebook.jpg" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onmouseover="pop('runner')">
-                    </a>
-                    <a href=https://github.com/jiama843/MusicLibraryJava>
-                        <img id="musiclib" src="Pictures/Profile Pic.png" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onmouseover="pop('musiclib')">
-                    </a>
-                    <img id="IoT" src="Pictures/goose.jpg" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onmouseover="pop('IoT')">
                 </div>
             <br>
             <h1 class="text-center">Projects</h1>
@@ -140,24 +131,7 @@
                 document.getElementById(elem).width-=3;
                 document.getElementById(elem).height-=3;
             }, 3);
-        function pop(elem){
-            document.getElementById(elem).width = 200;
-            document.getElementById(elem).height = 200;
         }
-        
-        function enlarge(elem){
-            //var myElement = document.getElementById(elem);
-            //var rect = myElement.getBoundingClientRect();
-            var grow = setInterval(
-            function(){
-                if(document.getElementById(elem).width >= 200 && document.getElementById(elem).height >= 200){
-                    clearInterval(grow);
-                }
-                document.getElementById(elem).width++;
-                document.getElementById(elem).height++;
-            }, 1);
-        }
-        
     </script> 
     </body>
 </html>
