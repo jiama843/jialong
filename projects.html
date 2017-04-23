@@ -46,23 +46,28 @@
             <br>
                 <div class="row" style="text-align:center">
                     <a href="https://github.com/jiama843/FactorPlus">
-                        <img id="factor+" src="Pictures/Start.png" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onmouseover="enlarge('factor+')" onmouseleave="resize('factor+')">
+                        <img id="factor+" src="Pictures/Start.png" class="img-circle img-fluid" alt="Responsive image" width="50" height="50" onmouseover="enlarge('factor+');setText1();" onmouseleave="resize('factor+');removeText();">
                     </a>
                     <a href="https://github.com/jiama843/Runner">
-                        <img id="runner" src="Pictures/Standard%20Flying%20Tsuchi.png" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onmouseover="enlarge('runner')" onmouseleave="resize('runner')">
+                        <img id="runner" src="Pictures/Standard%20Flying%20Tsuchi.png" class="img-circle img-fluid" alt="Responsive image" width="50" height="50" onmouseover="enlarge('runner');setText2();" onmouseleave="resize('runner');removeText();">
                     </a>
                     <a href=https://github.com/jiama843/MusicLibraryJava>
-                        <img id="musiclib" src="Pictures/music-note-icon.jpg" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onmouseover="enlarge('musiclib')" onmouseleave="resize('musiclib')">
+                        <img id="musiclib" src="Pictures/music-note-icon.jpg" class="img-circle img-fluid" alt="Responsive image" width="50" height="50" onmouseover="enlarge('musiclib');setText3()"
+                        onmouseleave="resize('musiclib');removeText()">
                     </a>
-                    <img id="IoT" src="Pictures/goose.jpg" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onmouseover="enlarge('IoT') setMouse4(true)" onmouseleave="resize('IoT')">
+                    <!--<img id="IoT" src="Pictures/goose.jpg" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onmouseover="enlarge('IoT', 4)" onmouseleave="resize('IoT', 4)">-->
                 </div>
             <br>
-            <h1 class="text-center">Projects</h1>
-            <p class="text-center">Feel free to look around! 
+            <h1 id="proj" class="text-center">Projects</h1>
+            <p id="info" class="text-center">Feel free to look around! 
                 <br> 
                 (Hover over Icons to enlarge)</p>
             <br>
             <br>
+            </div>
+            <div id="bg2">
+                <p class="text-center" style="font-size:10px">Made by: Jialong Ma
+                <span class="glyphicon glyphicon-copyright-mark">2017</span></p>
             </div>
         </div>
     <script>
@@ -71,10 +76,13 @@
             document.getElementById(elem).height = 200;
         }*/
         
-        /*var mouseover1;
-        var mouseover2;
-        var mouseover3;
-        var mouseover4;
+        var enlargeRunning = false;
+        var resizeRunning = false;
+        
+        /*var mouseover1 = false;
+        var mouseover2 = false;
+        var mouseover3 = false;
+        //var mouseover4;
         
         function setMouse1(flag){
             mouseover1 = flag;
@@ -88,48 +96,80 @@
             mouseover3 = flag;
         }
         
-        function setMouse4(flag){
+        /*function setMouse4(flag){
             mouseover4 = flag;
         }*/
         
-        function enlarge(elem){
+        function enlarge(elem/*, mousenum*/){
             //var myElement = document.getElementById(elem);
             //var rect = myElement.getBoundingClientRect();
             if(document.getElementById(elem).width >= 200 && document.getElementById(elem).height >= 200){
+                enlargeRunning = false;
                 return;
             }
+            enlargeRunning = true;
             var grow = setInterval(
             function(){
-                if((document.getElementById(elem).width >= 200 && document.getElementById(elem).height >= 200) /*||
+                if((document.getElementById(elem).width >= 200 && document.getElementById(elem).height >= 200) ||
+                   resizeRunning /* ||
                   (!mouseover1 && mousenum == 1) ||
                   (!mouseover2 && mousenum == 2) ||
-                  (!mouseover3 && mousenum == 3) ||
+                  (!mouseover3 && mousenum == 3) /*||
                   (!mouseover4 && mousenum == 4)*/){
+                    enlargeRunning = false;
                     clearInterval(grow);
                 }
-                document.getElementById(elem).width+=3;
-                document.getElementById(elem).height+=3;
+                document.getElementById(elem).width+=4;
+                document.getElementById(elem).height+=4;
             }, 3);
         }
         
-        function resize(elem){
+        function setText1(){
+            document.getElementById("proj").innerHTML = "Factor+";
+            document.getElementById("info").innerHTML = "The Factoring game";
+        }
+        
+        function setText2(){
+            document.getElementById("proj").innerHTML = "Spike Runner";
+            document.getElementById("info").innerHTML = "Dodge the Spikes!";
+        }
+        
+        function setText3(){
+            document.getElementById("proj").innerHTML = "Muse";
+            document.getElementById("info").innerHTML = "A Java Music Library";
+        }
+        
+        function removeText(){
+            document.getElementById("proj").innerHTML = "Projects";
+            document.getElementById("info").innerHTML = "Feel free to look around!<br>\n (Hover over Icons to enlarge)";
+        }
+        
+        function stopgrow(){
+            clearinterval(grow);
+        }
+        
+        function resize(elem/*, mousenum*/){
             //var myElement = document.getElementById(elem);
             //var rect = myElement.getBoundingClientRect();
-            if(document.getElementById(elem).width <= 25
-               && document.getElementById(elem).height <= 25){
+            if(document.getElementById(elem).width <= 50
+               && document.getElementById(elem).height <= 50){
+                resizeRunning = false;
                 return;
             }
+            resizeRunning = true;
             var shrink = setInterval(
             function(){
-                if((document.getElementById(elem).width <= 25 && document.getElementById(elem).height <= 25) /*||
+                if((document.getElementById(elem).width <= 50 && document.getElementById(elem).height <= 50) ||
+                   enlargeRunning/* ||
                   (mouseover1 && mousenum == 1) ||
                   (mouseover2 && mousenum == 2) ||
-                  (mouseover3 && mousenum == 3) ||
+                  (mouseover3 && mousenum == 3) /*||
                   (mouseover4 && mousenum == 4)*/){
-                    clearInterval(shrink);
+                        resizeRunning = false;
+                        clearInterval(shrink);
                 }
-                document.getElementById(elem).width-=3;
-                document.getElementById(elem).height-=3;
+                document.getElementById(elem).width-=4;
+                document.getElementById(elem).height-=4;
             }, 3);
         }
     </script> 
