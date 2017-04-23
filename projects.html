@@ -46,13 +46,13 @@
             <br>
                 <div class="row" style="text-align:center">
                     <a href="https://github.com/jiama843/FactorPlus">
-                        <img id="factor+" src="Pictures/Start.png" class="img-circle img-fluid" alt="Responsive image" width="50" height="50" onmouseover="enlarge1('factor+');setText1();" onmouseleave="resize1('factor+');removeText();">
+                        <img id="factor+" src="Pictures/Start.png" class="img-circle img-fluid" alt="Responsive image" width="100" height="100" onmouseover="enlarge1('factor+');setText1();" onmouseleave="resize1('factor+');removeText();">
                     </a>
                     <a href="https://github.com/jiama843/Runner">
-                        <img id="runner" src="Pictures/Standard%20Flying%20Tsuchi.png" class="img-circle img-fluid" alt="Responsive image" width="50" height="50" onmouseover="enlarge2('runner');setText2();" onmouseleave="resize2('runner');removeText();">
+                        <img id="runner" src="Pictures/Standard%20Flying%20Tsuchi.png" class="img-circle img-fluid" alt="Responsive image" width="100" height="100" onmouseover="enlarge2('runner');setText2();" onmouseleave="resize2('runner');removeText();">
                     </a>
                     <a href=https://github.com/jiama843/MusicLibraryJava>
-                        <img id="musiclib" src="Pictures/music-note-icon.jpg" class="img-circle img-fluid" alt="Responsive image" width="50" height="50" onmouseover="enlarge3('musiclib');setText3()"
+                        <img id="musiclib" src="Pictures/music-note-icon.jpg" class="img-circle img-fluid" alt="Responsive image" width="100" height="100" onmouseover="enlarge3('musiclib');setText3()"
                         onmouseleave="resize3('musiclib');removeText()">
                     </a>
                     <!--<img id="IoT" src="Pictures/goose.jpg" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onmouseover="enlarge('IoT', 4)" onmouseleave="resize('IoT', 4)">-->
@@ -204,15 +204,15 @@
         function resize1(elem/*, mousenum*/){
             //var myElement = document.getElementById(elem);
             //var rect = myElement.getBoundingClientRect();
-            if(document.getElementById(elem).width <= 50
-               && document.getElementById(elem).height <= 50){
+            if(document.getElementById(elem).width <= 100
+               && document.getElementById(elem).height <= 100){
                 resizeRunning1 = false;
                 return;
             }
             resizeRunning1 = true;
             var shrink = setInterval(
             function(){
-                if((document.getElementById(elem).width <= 50 && document.getElementById(elem).height <= 50) ||
+                if((document.getElementById(elem).width <= 100 && document.getElementById(elem).height <= 100) ||
                    enlargeRunning1/* ||
                   (mouseover1 && mousenum == 1) ||
                   (mouseover2 && mousenum == 2) ||
@@ -229,15 +229,15 @@
         function resize2(elem/*, mousenum*/){
             //var myElement = document.getElementById(elem);
             //var rect = myElement.getBoundingClientRect();
-            if(document.getElementById(elem).width <= 50
-               && document.getElementById(elem).height <= 50){
+            if(document.getElementById(elem).width <= 100
+               && document.getElementById(elem).height <= 100){
                 resizeRunning2 = false;
                 return;
             }
             resizeRunning2 = true;
             var shrink = setInterval(
             function(){
-                if((document.getElementById(elem).width <= 50 && document.getElementById(elem).height <= 50) ||
+                if((document.getElementById(elem).width <= 100 && document.getElementById(elem).height <= 100) ||
                    enlargeRunning2/* ||
                   (mouseover1 && mousenum == 1) ||
                   (mouseover2 && mousenum == 2) ||
@@ -254,15 +254,15 @@
         function resize3(elem/*, mousenum*/){
             //var myElement = document.getElementById(elem);
             //var rect = myElement.getBoundingClientRect();
-            if(document.getElementById(elem).width <= 50
-               && document.getElementById(elem).height <= 50){
+            if(document.getElementById(elem).width <= 100
+               && document.getElementById(elem).height <= 100){
                 resizeRunning3 = false;
                 return;
             }
             resizeRunning3 = true;
             var shrink = setInterval(
             function(){
-                if((document.getElementById(elem).width <= 50 && document.getElementById(elem).height <= 50) ||
+                if((document.getElementById(elem).width <= 100 && document.getElementById(elem).height <= 100) ||
                    enlargeRunning3/* ||
                   (mouseover1 && mousenum == 1) ||
                   (mouseover2 && mousenum == 2) ||
