@@ -2,6 +2,392 @@
 <html id="bg2">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+    
+<body>
+    <!--Navigation bar-->
+    <nav class="navbar navbar-default navbar-fixed-top" id="bg2">
+        <div class="container">
+            <div class="navbar-header" style="text-align:center">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                    <a class="navbar-brand" href="index.html">Jialong 
+                    <span>Ma</span>
+                    <span style="font-size:10px">University of Waterloo Computer Science</span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li data-target="#myCarousel" data-slide-to="0"><a>About</a></li>
+                    <li data-target="#myCarousel" data-slide-to="1"><a>Projects</a></li>
+                    <li data-target="#myCarousel" data-slide-to="2"><a>Contact</a></li>
+                    <!--<li><a href="index.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+  <br>
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+    <!-- Indicators -->
+    <!--<ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>-->
+
+    <!--/ To make the dots at the bottom visible again, go to carousel-indicators li and
+change visible to true-->
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" id="bg2" role="listbox">
+      <div class="item active">
+        <div id="html">
+        <br>
+        <div id="bg2">
+    	<div class="col-lg-12" >
+            <br>
+            <br>
+            <br>
+            <div class="row text-center">
+                <img src="Pictures/o-UNIVERSITY-OF-WATERLOO-facebook.jpg" class="img-circle" alt="Responsive image" width="100" height="100" onclick="scrollDown('rainelem')">
+                <img src="Pictures/Profile Pic.png" class="img-circle" alt="Responsive image" width="200" height="200" onclick="scrollDown('rainelem')">
+                <img src="Pictures/goose.jpg" class="img-circle" alt="Responsive image" width="100" height="100" onclick="scrollDown('rainelem')">
+            </div>
+            <br>
+    		<h1 class="text-center">About Myself</h1>
+            <p style = "margin-left: 100px;margin-right: 50px"> Attending Hackathons, coding competitions and learning more about the tech industry in general are hobbies of mine. Throughout my career, I aspire to be involved in Software Development, it doesn't matter if its IoT/Cloud/BigData, iOS/Android, Analytics, Fullstack/Web etc. Anything goes!</p>
+        <div style="text-align:center">
+            <a href="Resume.pdf">Resume</a>
+        </div>
+    	</div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="bg2">
+            <p class="text-center" style="font-size:10px">Made by: Jialong Ma
+            <span class="glyphicon glyphicon-copyright-mark">2017</span></p>
+        </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="item">
+            <div id="bg2">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+                <div class="row" style="text-align:center">
+                    <a href="https://github.com/lyoon1/FactorPlus-Ver.-2">
+                        <img id="factor+" src="Pictures/Start.png" class="img-circle img-fluid" alt="Responsive image" width="100" height="100" onmouseover="enlarge1('factor+');setText1();" onmouseleave="resize1('factor+');removeText();">
+                    </a>
+                    <a href="https://github.com/jiama843/Runner">
+                        <img id="runner" src="Pictures/Standard%20Flying%20Tsuchi.png" class="img-circle img-fluid" alt="Responsive image" width="100" height="100" onmouseover="enlarge2('runner');setText2();" onmouseleave="resize2('runner');removeText();">
+                    </a>
+                    <a href=https://github.com/jiama843/MusicLibraryJava>
+                        <img id="musiclib" src="Pictures/music-note-icon.jpg" class="img-circle img-fluid" alt="Responsive image" width="100" height="100" onmouseover="enlarge3('musiclib');setText3()"
+                        onmouseleave="resize3('musiclib');removeText()">
+                    </a>
+                    <!--<img id="IoT" src="Pictures/goose.jpg" class="img-circle img-fluid" alt="Responsive image" width="25" height="25" onmouseover="enlarge('IoT', 4)" onmouseleave="resize('IoT', 4)">-->
+                </div>
+            <br>
+            <h1 id="proj" class="text-center">Projects</h1>
+            <p id="info" class="text-center">Feel free to look around! 
+                <br> 
+                (Hover over Icons to enlarge)</p>
+            <br>
+            <br>
+            <div id="bg2">
+                <p class="text-center" style="font-size:10px">Made by: Jialong Ma
+                <span class="glyphicon glyphicon-copyright-mark">2017</span></p>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            </div>
+      </div>
+    
+      <div class="item">
+        <div id="bg2">
+        <br>
+        <br>
+        <br>
+        <br>
+    <div class="text-center" id="bg2">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>Contact Me</h1>
+        <div id="bg2">
+            <a class="icon github" href="https://github.com/jiama843"></a>
+            <a class="icon linkedin" href="https://www.linkedin.com/in/john-ma-4b9896132/"></a>
+            <a class="icon mail" href="mailto:jiama843@gmail.com"></a>
+        </div>
+        <div id="bg2">
+        <p class="text-center" style="font-size:10px">Made by: Jialong Ma
+            <span class="glyphicon glyphicon-copyright-mark">2017</span>
+        </p>
+        </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+    </div>
+    </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+        <script>
+        /*function pop(elem){
+            document.getElementById(elem).width = 200;
+            document.getElementById(elem).height = 200;
+        }*/
+        
+        var enlargeRunning1 = false;
+        var enlargeRunning2 = false;
+        var enlargeRunning3 = false;
+        
+        var resizeRunning1 = false;
+        var resizeRunning2 = false; 
+        var resizeRunning3 = false;
+        
+        /*var mouseover1 = false;
+        var mouseover2 = false;
+        var mouseover3 = false;
+        //var mouseover4;
+        
+        function setMouse1(flag){
+            mouseover1 = flag;
+        }
+        
+        function setMouse2(flag){
+            mouseover2 = flag;
+        }
+        
+        function setMouse3(flag){
+            mouseover3 = flag;
+        }
+        
+        /*function setMouse4(flag){
+            mouseover4 = flag;
+        }*/
+        
+        function enlarge1(elem/*, mousenum*/){
+            //var myElement = document.getElementById(elem);
+            //var rect = myElement.getBoundingClientRect();
+            if(document.getElementById(elem).width >= 200 && document.getElementById(elem).height >= 200){
+                enlargeRunning1 = false;
+                return;
+            }
+            enlargeRunning1 = true;
+            var grow = setInterval(
+            function(){
+                if((document.getElementById(elem).width >= 200 && document.getElementById(elem).height >= 200) ||
+                   resizeRunning1 /* ||
+                  (!mouseover1 && mousenum == 1) ||
+                  (!mouseover2 && mousenum == 2) ||
+                  (!mouseover3 && mousenum == 3) /*||
+                  (!mouseover4 && mousenum == 4)*/){
+                    enlargeRunning1 = false;
+                    clearInterval(grow);
+                }
+                document.getElementById(elem).width+=7;
+                document.getElementById(elem).height+=7;
+            }, 10);
+        }
+        
+        function enlarge2(elem/*, mousenum*/){
+            //var myElement = document.getElementById(elem);
+            //var rect = myElement.getBoundingClientRect();
+            if(document.getElementById(elem).width >= 200 && document.getElementById(elem).height >= 200){
+                enlargeRunning2 = false;
+                return;
+            }
+            enlargeRunning2 = true;
+            var grow = setInterval(
+            function(){
+                if((document.getElementById(elem).width >= 200 && document.getElementById(elem).height >= 200) ||
+                   resizeRunning2 /* ||
+                  (!mouseover1 && mousenum == 1) ||
+                  (!mouseover2 && mousenum == 2) ||
+                  (!mouseover3 && mousenum == 3) /*||
+                  (!mouseover4 && mousenum == 4)*/){
+                    enlargeRunning2 = false;
+                    clearInterval(grow);
+                }
+                document.getElementById(elem).width+=7;
+                document.getElementById(elem).height+=7;
+            }, 10);
+        }
+        
+        function enlarge3(elem/*, mousenum*/){
+            //var myElement = document.getElementById(elem);
+            //var rect = myElement.getBoundingClientRect();
+            if(document.getElementById(elem).width >= 200 && document.getElementById(elem).height >= 200){
+                enlargeRunning3 = false;
+                return;
+            }
+            enlargeRunning3 = true;
+            var grow = setInterval(
+            function(){
+                if((document.getElementById(elem).width >= 200 && document.getElementById(elem).height >= 200) ||
+                   resizeRunning3 /* ||
+                  (!mouseover1 && mousenum == 1) ||
+                  (!mouseover2 && mousenum == 2) ||
+                  (!mouseover3 && mousenum == 3) /*||
+                  (!mouseover4 && mousenum == 4)*/){
+                    enlargeRunning3 = false;
+                    clearInterval(grow);
+                }
+                document.getElementById(elem).width+=7;
+                document.getElementById(elem).height+=7;
+            }, 10);
+        }
+        
+        function setText1(){
+            document.getElementById("proj").innerHTML = "Factor+";
+            document.getElementById("info").innerHTML = "The Factoring game";
+        }
+        
+        function setText2(){
+            document.getElementById("proj").innerHTML = "Spike Runner";
+            document.getElementById("info").innerHTML = "Dodge the Spikes!";
+        }
+        
+        function setText3(){
+            document.getElementById("proj").innerHTML = "Muse";
+            document.getElementById("info").innerHTML = "A Java Music Library";
+        }
+        
+        function removeText(){
+            document.getElementById("proj").innerHTML = "Projects";
+            document.getElementById("info").innerHTML = "Feel free to look around!<br>\n (Hover over Icons to enlarge)";
+        }
+        
+        function stopgrow(){
+            clearinterval(grow);
+        }
+        
+        function resize1(elem/*, mousenum*/){
+            //var myElement = document.getElementById(elem);
+            //var rect = myElement.getBoundingClientRect();
+            if(document.getElementById(elem).width <= 100
+               && document.getElementById(elem).height <= 100){
+                resizeRunning1 = false;
+                return;
+            }
+            resizeRunning1 = true;
+            var shrink = setInterval(
+            function(){
+                if((document.getElementById(elem).width <= 100 && document.getElementById(elem).height <= 100) ||
+                   enlargeRunning1/* ||
+                  (mouseover1 && mousenum == 1) ||
+                  (mouseover2 && mousenum == 2) ||
+                  (mouseover3 && mousenum == 3) /*||
+                  (mouseover4 && mousenum == 4)*/){
+                        resizeRunning1 = false;
+                        clearInterval(shrink);
+                }
+                document.getElementById(elem).width-=7;
+                document.getElementById(elem).height-=7;
+            }, 10);
+        }
+        
+        function resize2(elem/*, mousenum*/){
+            //var myElement = document.getElementById(elem);
+            //var rect = myElement.getBoundingClientRect();
+            if(document.getElementById(elem).width <= 100
+               && document.getElementById(elem).height <= 100){
+                resizeRunning2 = false;
+                return;
+            }
+            resizeRunning2 = true;
+            var shrink = setInterval(
+            function(){
+                if((document.getElementById(elem).width <= 100 && document.getElementById(elem).height <= 100) ||
+                   enlargeRunning2/* ||
+                  (mouseover1 && mousenum == 1) ||
+                  (mouseover2 && mousenum == 2) ||
+                  (mouseover3 && mousenum == 3) /*||
+                  (mouseover4 && mousenum == 4)*/){
+                        resizeRunning2 = false;
+                        clearInterval(shrink);
+                }
+                document.getElementById(elem).width-=7;
+                document.getElementById(elem).height-=7;
+            }, 10);
+        }
+        
+        function resize3(elem/*, mousenum*/){
+            //var myElement = document.getElementById(elem);
+            //var rect = myElement.getBoundingClientRect();
+            if(document.getElementById(elem).width <= 100
+               && document.getElementById(elem).height <= 100){
+                resizeRunning3 = false;
+                return;
+            }
+            resizeRunning3 = true;
+            var shrink = setInterval(
+            function(){
+                if((document.getElementById(elem).width <= 100 && document.getElementById(elem).height <= 100) ||
+                   enlargeRunning3/* ||
+                  (mouseover1 && mousenum == 1) ||
+                  (mouseover2 && mousenum == 2) ||
+                  (mouseover3 && mousenum == 3) /*||
+                  (mouseover4 && mousenum == 4)*/){
+                        resizeRunning3 = false;
+                        clearInterval(shrink);
+                }
+                document.getElementById(elem).width-=7;
+                document.getElementById(elem).height-=7;
+            }, 10);
+        }
+        
+    </script> 
+</body>
+</html>
+
+<!-- <!doctype html>
+<html id="bg2">
+<head>
+    <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
@@ -13,7 +399,7 @@
     
 <body>
     <!--Navigation bar-->
-    <nav class="navbar navbar-default navbar-fixed-top" id="bg2">
+    <!--<nav class="navbar navbar-default navbar-fixed-top" id="bg2">
         <div class="container">
             <div class="navbar-header" style="text-align:center">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -34,7 +420,7 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav>-->
     <!--/ Navigation bar-->
     
     <!--/ <div class="jumbotron" style="background-color:black;">
@@ -44,7 +430,7 @@
     	</div>
         <p style="color:lightgrey">A Computer Science Student at the University of Waterloo</p>
     </div> -->
-    <br>
+    <!-- <br>
     <br>
     <div id="html">
     <div  id="bg2">
@@ -75,4 +461,4 @@
         </div>
     </div>
 </body>
-</html>
+</html> -->
